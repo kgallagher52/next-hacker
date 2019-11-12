@@ -1,13 +1,18 @@
 import fetch from 'isomorphic-fetch';
 import Error from 'next/error';
+import Layout from '../components/Layout';
 import StoryList from '../components/StoryList';
 
 
 const Index = ({ stories }) => {
 	return stories.length === 0 ? (
+    <Layout title={"Error"}>
 		<Error statusCode={503} />
+    </Layout>
 	) : (
-    <StoryList stories={stories}/>
+    <Layout title={"Stories"} description="A Hacker News clone made with Next.js and Bootstrap.">
+      <StoryList stories={stories}/>
+    </Layout>
 	);
 };
 
