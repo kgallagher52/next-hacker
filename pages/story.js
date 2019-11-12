@@ -11,6 +11,9 @@ const Story = ({ story }) => {
 			<div className="jumbotron">
 				<h1 className="display-4">{story.user}</h1>
 				<p className="lead">{story.title}</p>
+        <strong>{story.points} Points</strong>
+        <strong>{story.comments_count} Comments</strong>
+        <strong>{story.time_ago}</strong>
 				<hr className="my-4" />
         {story.comments.length > 0 ? (
           <CommentList comments={story.comments}/>
@@ -37,6 +40,10 @@ const Story = ({ story }) => {
 						overflow-y: scroll;
 						margin: 12px;
 					}
+          strong {
+            margin:8px;
+            margin-bottom:24px;
+          }
 				`}
 			</style>
 		</Layout>
