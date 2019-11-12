@@ -3,7 +3,8 @@ import Link from 'next/link';
 const StoryList = ({ stories }) => {
 	return (
 		<div className="story-list">
-			<h1>Hacker Next </h1>
+      <div className="component-header">
+      </div>
 			{stories.map((s) => (
 				<div key={s.id} className="card story-card">
 					<div className="card-body">
@@ -20,6 +21,7 @@ const StoryList = ({ stories }) => {
 			))}
 			<style jsx>
 				{`
+        
         .story-list {
           display:flex;
           justify-content:space-evenly;
@@ -42,6 +44,7 @@ const StoryList = ({ stories }) => {
 					.story-card {
 						width: 18rem;
             height:200px;
+            overflow-y:scroll;
             margin:12px;
             
 
