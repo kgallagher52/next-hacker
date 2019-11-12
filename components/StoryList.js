@@ -3,8 +3,7 @@ import Link from 'next/link';
 const StoryList = ({ stories }) => {
 	return (
 		<div className="story-list">
-      <div className="component-header">
-      </div>
+			<div className="component-header" />
 			{stories.map((s) => (
 				<div key={s.id} className="card story-card">
 					<div className="card-body">
@@ -21,33 +20,32 @@ const StoryList = ({ stories }) => {
 			))}
 			<style jsx>
 				{`
-        
-        .story-list {
-          display:flex;
-          justify-content:space-evenly;
-          align-items:center;
-          flex-flow:row wrap;
-          width:100%;
-          background:#f3f3f3;
-        }
-        h1 {
-          width:100%;
-          text-align:center;
-          margin:12px;
-        }
-  
-        a {
-          color:darkblue;
-          font-weight:700;
-            
-        }
-					.story-card {
-						width: 18rem;
-            height:200px;
-            overflow-y:scroll;
-            margin:12px;
-            
+					.story-list {
+						display: flex;
+						justify-content:center;
+						align-items: center;
+						flex-flow: row wrap;
+						width: 100%;
+						background: #f3f3f3;
+					}
+					h1 {
+						width: 100%;
+						text-align: center;
+						margin: 12px;
+					}
 
+					a {
+						color: darkblue;
+						font-weight: 700;
+					}
+					.story-card {
+						width: 350px;
+						height: 250px;
+						overflow-y: scroll;
+						margin: 12px;
+						-webkit-box-shadow: 0 10px 6px -6px #777;
+						-moz-box-shadow: 0 10px 6px -6px #777;
+						box-shadow: 0 10px 6px -6px #777;
 					}
 				`}
 			</style>

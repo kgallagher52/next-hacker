@@ -7,3 +7,4 @@
     2. https://github.com/kgallagher52/next-hacker
     3. Hacker News API: https://news.ycombinator.com/
     4. https://getbootstrap.com/docs/4.3/getting-started/introduction/
+    5. Awesome box-shadows: http://cssdeck.com/labs/16-box-shadows-to-save-your-time

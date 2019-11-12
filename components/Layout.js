@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import Router from 'next/router';
 
-const Layout = ({ children, title,description }) => {
+const Layout = ({ children, title, description, backButton }) => {
 	return (
 		<div>
       <Head>
@@ -10,6 +11,7 @@ const Layout = ({ children, title,description }) => {
       </Head>
 			<div >
 				<nav className="navbar navbar-expand-lg navbar-light bg-light">
+        {backButton && <span onClick={() => Router.back()} className="back-button">&#x2b05;</span>}
 					<Link href="/">
 						<a className="navbar-brand">Hacker Next</a>
 					</Link>
@@ -26,29 +28,21 @@ const Layout = ({ children, title,description }) => {
 						<span className="navbar-toggler-icon" />
 					</button>
 					<div className="collapse navbar-collapse" id="navbarNav">
-						<ul className="navbar-nav">
-							<li className="nav-item active">
-								<Link href="/">
-									<a className="nav-link">
-										Home <span className="sr-only">(current)</span>
-									</a>
-								</Link>
-							</li>
-							<li className="nav-item">
-								<Link href="/">
-									<a className="nav-link">Features</a>
-								</Link>
-							</li>
-							<li className="nav-item">
-								<Link href="/">
-									<a className="nav-link">Pricing</a>
-								</Link>
-							</li>
-						</ul>
 					</div>
 				</nav>
 				{children}
 			</div>
+      <style jsx>{`
+        .back-button {
+          font-size:0.9rem;
+          padding-right:1em;
+          cursor:pointer;
+        }
+        .back-button:hover {
+          color: darkblue;
+        }
+        
+        `}</style>
 		</div>
 	);
 };

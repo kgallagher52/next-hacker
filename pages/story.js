@@ -7,7 +7,7 @@ const Story = ({ story }) => {
 	return !story ? (
 		<Error statusCode={503} />
 	) : (
-		<Layout title={story.title}>
+		<Layout title={story.title} backButton={true}>
 			<div className="jumbotron">
 				<h1 className="display-4">{story.user}</h1>
 				<p className="lead">{story.title}</p>
