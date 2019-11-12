@@ -17,7 +17,7 @@ const Index = ({ stories, page }) => {
 					<ul className="pagination">
 						<li className={`page-item ${page === 1 ? 'disabled' : ''}`}>
 							<Link href={`/?page=${page - 1}`}>
-								<a className="page-link">Previous</a>
+								<a className="page-link">Prev</a>
 							</Link>
 						</li>
 						<li className="page-item">
