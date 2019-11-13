@@ -16,3 +16,4 @@
     5. Awesome box-shadows: http://cssdeck.com/labs/16-box-shadows-to-save-your-time
     6. Put app on device set up: https://tomitm.github.io/appmanifest/
     7. App on device logos: https://app-manifest.firebaseapp.com/
+    8. https://developers.google.com/web/fundamentals/web-app-manifest
