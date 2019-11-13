@@ -4,9 +4,10 @@
   "description": "A Hacker news clone made with Next.js for expanding my skill set.",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "nodemon server.js",
     "build": "next build",
-    "start": "next start -p $PORT"
+    "start": "NODE_ENV=production node server.js",
+    "heroku-postbuild": "next build"
   },
   "author": "Keaton Gallagher",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "isomorphic-fetch": "^2.2.1",
     "next": "^9.1.3",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "sw-precache-webpack-plugin": "^0.11.5"
   }
 }
