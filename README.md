@@ -5,6 +5,14 @@
   ```
   We can take our web application and deliver it to a phone so it almost seems like it is a native application, 
   run on your home screen and be able to run it offline.
+
+  ```
+
+  ```
+  Service Workers - Are scripts that run in the background of your application to allow caching and give the 
+  user a native applicaation filling. We configure these service workers using next.config.js (If you are using Next.js).
+  First you need to install this package to help ease the process  instead of writing your own service worker npm i sw-precache-webpack-plugin
+
   ```
 
 ## Resources
